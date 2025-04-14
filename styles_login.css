@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* General styling for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    color: white;
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:url("Book-iPad-wallpaper-Library.webp");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+/* Styling for the login container */
+.login-container {
+    width: 490px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ffffff80;
+    backdrop-filter: blur(8px);
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+/* Styling for the title inside the login container */
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+/* Styling for form labels */
+.input-field{
+position: relative;
+border-bottom: 2px solid #ccc;
+margin: 15px 0;
+}
+.input-field label{
+position: absolute;
+color: #fff;
+top: 50%;
+left: 0%;
+transform: translateY(-50%);
+font-size: 16px;
+pointer-events: none;
+transition: 0.15s ease;
+}
+.input-field input{
+width: 100%;
+height: 40px;
+color: #fff;
+background: transparent;
+border: none;
+outline: none;
+font-size: 16px;
+}
+.input-field input:focus~label,
+.input-field input:valid~label{
+font-size: 0.8rem;
+top: 10px;
+transform: translateY(-120%);
+}
+
+.forget{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 25px 0 35px 0;
+color: #fff;
+}
+.forget a {
+    color: #efefef;
+    text-decoration: underline;
+}
+#remember{
+    accent-color: #fff;
+}
+.forget label{
+display: flex;
+align-items: center;
+}
+.forget label p{
+margin-left: 8px;
+}
+.wrapper a{
+    color: #efefef;
+    text-decoration: underline;
+}
+/* Styling for the submit button */
+button{
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+/* Hover effect for the submit button */
+button[type="submit"]:hover {
+    background-color: #0fb300; /* Same green on hover */
+}
+.register{
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+.register a {
+    color: #efefef;
+    text-decoration: underline;
+}
+/* Styling for the error message */
+.error-message {
+    background-color: #f8d7da; /* Light red background for errors */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Light red border */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}

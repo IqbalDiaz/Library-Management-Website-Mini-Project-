@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Styling for the entire body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('Book-iPad-wallpaper-Library.webp'); /* Replace with your bookshelves image URL */
+    background-position: center;
+    background-size: cover; /* Ensures it covers the entire screen */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Make sure the background stretches for the full height */
+    color: white;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+    z-index: -1; /* Places the overlay behind the content */
+}
+
+/* Navigation bar at the top of the page */
+.nav {
+    background-color: #333; /* Dark background */
+    padding: 15px; /* Padding around the links */
+    text-align: center; /* Center the navigation links */
+    position: fixed; /* Make the nav fixed at the top */
+    top: 0;
+    width: 100%; /* Full-width navigation bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    z-index: 100; /* Ensures it stays on top of other elements */
+}
+
+/* Style for navigation links */
+.nav a {
+    color: white; /* White text for the links */
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 15px; /* Spacing between the links */
+}
+
+/* Hover effect for navigation links */
+.nav a:hover {
+    color: #ccc; /* Light grey color on hover */
+}
+
+/* Styling for the welcome message section */
+.welcome-message {
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 30px; /* Padding inside the message box */
+    margin-top: 100px; /* Space from the top */
+    text-align: center; /* Center-align the text */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    max-width: 800px; /* Limit the width */
+    margin-left: auto;
+    margin-right: auto; /* Center the message box horizontally */
+}
+
+/* Styling for the heading inside the welcome message */
+.welcome-message h2 {
+    font-size: 2em; /* Larger font size for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: bold; /* Bold text for the heading */
+}
+
+/* Styling for the paragraph text inside the welcome message */
+.welcome-message p {
+    font-size: 1.2em; /* Larger font size for the paragraph */
+    color: #f4f7f6; /* Light text color for the paragraph */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .welcome-message {
+        padding: 20px; /* Less padding on smaller screens */
+        margin-top: 50px; /* Less space from the top */
+    }
+
+    .welcome-message h2 {
+        font-size: 1.5em; /* Smaller font size for heading */
+    }
+
+    .welcome-message p {
+        font-size: 1em; /* Smaller font size for paragraph */
+    }
+}
+
+/* Container for all the book genres and items */
+.book-container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 120px auto 0; /* Center the container with margin for space from top */
+    padding: 20px; /* Padding inside the container */
+}
+
+/* Genre section styles */
+.genre-section {
+    margin-bottom: 40px; /* Spacing between genre sections */
+}
+
+/* Title for each genre section */
+.genre-title {
+    font-size: 1.8em; /* Large font size */
+    margin-bottom: 20px;
+    color:  white; /* white text color */
+    border-bottom: 2px solid  white; /* Underline effect */
+    padding-bottom: 5px; /* Padding for underline space */
+}
+
+/* Container for books under each genre */
+.book {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between book items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Individual book item styling */
+.book-item {
+    width: 30%; /* Book items take up 30% of the container width */
+    text-align: center; /* Center text below the book image */
+    margin-bottom: 20px; /* Spacing between book items */
+}
+
+/* Styling for book images */
+.book img {
+    width: 150px; /* Fixed width for book images */
+    height: 200px; /* Fixed height for book images */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Hover effect for book images */
+.book img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Styling for book title text */
+.book-title {
+    margin-top: 10px; /* Space above the book title */
+    font-weight: bold; /* Bold text */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+    /* Book items take up full width on smaller screens */
+    .book-item {
+        width: 100%;
+    }
+
+    /* Smaller book images on small screens */
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+}
